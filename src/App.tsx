@@ -12,14 +12,16 @@ function App() {
 
       <main className="max-w-7xl mx-auto py-10 grid md:grid-cols-2">
         <div>
-          <h2>Menu</h2>
+          <h2 className="text-4xl font-black">Menu</h2>
 
+        <div className="mt-5">
           {menuItems.map(item => (
             <MenuItem
             key={item.id}
             item={item}
             />
           ))}
+          </div>
         </div>
 
         <div>
