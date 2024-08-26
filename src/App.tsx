@@ -17,7 +17,7 @@ function App() {
         <div>
           <h2 className="text-4xl font-black">Menu</h2>
 
-        <div className="mt-5">
+        <div className="mt-5 space-y-3">
           {menuItems.map(item => (
             <MenuItem
             key={item.id}
@@ -28,8 +28,8 @@ function App() {
           </div>
         </div>
 
-        <div>
-          <h2>Count</h2>
+        <div className="border border-dashed border-slate-400 p-5 rounded-lg space-y-10 mx-5">
+          <h2>Order</h2>
         </div>
       </main>
 
