@@ -27,9 +27,14 @@ export default function useOrder () {
             const newItem = {...item, quantity: 1}
             setOrder([...order, newItem])
         }
-    }    
+    }
+    
+        const removeItem = () => {
+            console.log("Deleting..."); 
+    }
 
     return {
+        removeItem,
         order,
         addItem
     }
