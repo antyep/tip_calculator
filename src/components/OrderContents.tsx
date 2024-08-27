@@ -14,13 +14,23 @@ export default function orderContents({order} : OrderContentsProps) {
             <p className="text-center">empty</p>
             : (
                 order.map(item => (
-                    <div key={item.id}>
-                        <p className="text-lg">
-                            {item.name} - {formatCurrency(item.price)}
-                        </p>
-                        <p className="font-black">
-                            Quantity: {item.quantity}
-                        </p>
+                    <div 
+                        key={item.id}
+                        className="flex justify-between items-center border-t border-gray-400 py-2 last-of-type:border-b">
+
+                        <div>
+                            <p className="text-lg">
+                                 {item.name} - {formatCurrency(item.price)}
+                            </p>
+                            <p className="font-black">
+                                Quantity: {item.quantity} - {formatCurrency(item.price * item.quantity)}
+                            </p>
+                        </div>
+
+                        <button
+                        className="bg-red-700 h-8 w-8 rounded-full text-white font-black">
+                            X
+                        </button>
                     </div>
                 ))
             )
