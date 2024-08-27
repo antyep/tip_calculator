@@ -4,20 +4,8 @@ import type { MenuItem, OrderItem } from "../types"
 
 export default function useOrder () {
     const [order, setOrder] = useState<OrderItem[]>([])
+    const [tip, setTip] = useState(0)
 
-    // const addItem = (item: MenuItem) => {
-    //     const itemExists = order?.find(orderItem => orderItem.id === item.id);
-    
-    //     setOrder(itemExists 
-    //         ? order.map(orderItem =>
-    //             orderItem.id === item.id
-    //             ? { ...orderItem, quantity: orderItem.quantity + 1 }
-    //             : orderItem
-    //           )
-    //         : [...order, { ...item, quantity: 1 }]
-    //     );
-    // }
-    
     const addItem = (item: MenuItem) => { 
         const itemExists = order?.find(orderItem => orderItem.id === item.id)
         if(itemExists) {
@@ -34,8 +22,10 @@ export default function useOrder () {
     }
 
     return {
-        removeItem,
         order,
-        addItem
+        tip,
+        setTip,
+        addItem,
+        removeItem,
     }
 }
