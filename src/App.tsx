@@ -43,7 +43,9 @@ function App() {
           />
 
           <OrderTotals 
-            order={order}/>
+            order={order}
+            tip={tip}
+            />
         </div>
       </main>
 
