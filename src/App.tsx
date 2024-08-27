@@ -37,7 +37,8 @@ function App() {
             removeItem={removeItem}
           />
 
-          <OrderTotals />
+          <OrderTotals 
+            order={order}/>
         </div>
       </main>
 
